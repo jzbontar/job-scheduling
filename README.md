@@ -156,16 +156,16 @@ You will first need to compile the program.
 To run the scheduler on the provided sample file, first gunzip the
 configuration file:
 
-	$ gunzip sample/1.txt.gz
+	$ gunzip sample/in.txt.gz
 
 Then, run the Scheduler:
 
-	$ java si/zbontar/Scheduler < sample/1.txt > out
+	$ java si/zbontar/Scheduler < sample/in.txt > out.txt
 
 The output file contains lines with three integers each. The format
 is ``userID taskID quantityToDo''.
 
-	$ cat out
+	$ cat out.txt
 	3348 434365 41405
 	2094 306026 22271
 	6208 180629 50603
@@ -174,9 +174,7 @@ is ``userID taskID quantityToDo''.
 	2387 462467 427405
 	3432 462590 81724
 
-You can compute the md5 of the output file to make sure you get the
-same solution as I do.
+Make sure that the computed output file is the same as the correct output file.
+The output of the following diff command should be empty.
 
-	$ md5sum out
-	da8ae6d7d8670a9e7d00769aa2893b4e  out
-
+	$ diff out.txt sample/out.txt
