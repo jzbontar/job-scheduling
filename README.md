@@ -2,8 +2,8 @@ Algorithm for Optimal Job Scheduling and Task Allocation under Constraints
 ==========================================================================
 
 This program won first place at the Job Scheduling challenge hosted on
-[tunedit](http://tunedit.org/challenge/job-scheduling) in 2011. The document
-contains the description of the task and main ideas of my solution.
+[tunedit](http://tunedit.org/challenge/job-scheduling) in 2011. This document
+contains the description of the task and the main ideas of my solution.
 
 Task
 ----
@@ -88,7 +88,7 @@ Algorithm Description
 
 From the scoring function it is clear that our submissions were compared
 by average lateness first and profit second. Hence, I decided to split my
-algorithm into two parts. First a heurisitic algorithm computes a schedule
+algorithm into two parts. First a heuristic algorithm computes a schedule
 optimizing lateness, then the solution is modified so that profit is
 maximized but average lateness remains constant. Recall that the scoring
 function rounds the average lateness component to 3 digits, allowing us
@@ -153,7 +153,8 @@ You will first need to compile the program.
 
 	$ javac si/zbontar/Scheduler.java
 
-To run the scheduler on the provided sample file, first gunzip the config file:
+To run the scheduler on the provided sample file, first gunzip the
+configuration file:
 
 	$ gunzip sample/1.txt.gz
 
