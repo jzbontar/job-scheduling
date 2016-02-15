@@ -154,9 +154,10 @@ You will first need to compile the program.
 	$ javac si/zbontar/Scheduler.java
 
 To run the scheduler on the provided sample file, first gunzip the
-configuration file:
+configuration file and the correct output:
 
 	$ gunzip sample/in.txt.gz
+	$ gunzip sample/out.txt.gz
 
 Then, run the Scheduler:
 
