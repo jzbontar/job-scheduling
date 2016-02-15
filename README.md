@@ -1,10 +1,9 @@
 Algorithm for Optimal Job Scheduling and Task Allocation under Constraints
 ==========================================================================
 
-This program was developed as a solution to the Job Scheduling challenge
-hosted on [tunedit](http://tunedit.org/challenge/job-scheduling) in 2011.
-The document contains the description of the task and main ideas of my
-solution.
+This program won first place at the Job Scheduling challenge hosted on
+[tunedit](http://tunedit.org/challenge/job-scheduling) in 2011. The document
+contains the description of the task and main ideas of my solution.
 
 Task
 ----
@@ -150,7 +149,33 @@ the first phase was found with bisection.
 Usage
 -----
 
-You can use the program as a library or as a standalone program in which
-case the configuration file is read from standard input:
+You will first need to compile the program.
 
-    java -jar scheduler.jar < configFile
+	$ javac si/zbontar/Scheduler.java
+
+To run the scheduler on the provided sample file, first gunzip the config file:
+
+	$ gunzip sample/1.txt.gz
+
+Then, run the Scheduler:
+
+	$ java si/zbontar/Scheduler < sample/1.txt > out
+
+The output file contains lines with three integers each. The format
+is ``userID taskID quantityToDo''.
+
+	$ cat out
+	3348 434365 41405
+	2094 306026 22271
+	6208 180629 50603
+	...
+	2173 462050 249157
+	2387 462467 427405
+	3432 462590 81724
+
+You can compute the md5 of the output file to make sure you get the
+same solution as I do.
+
+	$ md5sum out
+	da8ae6d7d8670a9e7d00769aa2893b4e  out
+
